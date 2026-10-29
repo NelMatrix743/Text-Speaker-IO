@@ -1,0 +1,88 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/output.css' %}" rel="stylesheet" type="text/css" />
+
+    <title>Text Speaker IO</title>
+</head>
+<body>
+
+    <h1 style="text-align: center; margin-top: 50px; font-size: 100px;">LANDING PAGE</h1>
+
+<!-- Open the modal using ID.showModal() method -->
+<div style="display: flex; justify-content: center; margin-top: 100px;">
+  <button class="btn" onclick="my_modal_1.showModal()">
+    Open Modal
+  </button>
+</div>
+
+<dialog id="my_modal_1" class="modal">
+  <div class="modal-box max-w-md">
+
+    <!-- Login Form -->
+    <h3 class="font-bold text-2xl mb-6 text-center">Login</h3>
+
+    <form class="space-y-4">
+
+      <!-- Email -->
+      <div>
+        <label class="label">
+          <span class="label-text">Email</span>
+        </label>
+        <input
+          type="email"
+          placeholder="you@example.com"
+          class="input input-bordered w-full"
+          required
+        />
+      </div>
+
+      <!-- Password -->
+      <div>
+        <label class="label">
+          <span class="label-text">Password</span>
+        </label>
+        <input
+          type="password"
+          placeholder="Enter your password"
+          class="input input-bordered w-full"
+          required
+        />
+      </div>
+
+      <!-- Remember Me -->
+      <div class="flex items-center justify-between">
+        <label class="label cursor-pointer gap-2">
+          <input type="checkbox" class="checkbox checkbox-sm" />
+          <span class="label-text">Remember me</span>
+        </label>
+
+        <a href="#" class="link link-primary text-sm">
+          Forgot password?
+        </a>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-primary w-full">
+        Login
+      </button>
+
+    </form>
+
+    <!-- Modal Actions -->
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+
+  </div>
+</dialog>
+    
+</body>
+</html>
